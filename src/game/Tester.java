@@ -41,9 +41,6 @@ public class Tester implements Player{
 		}
 		opponentResponse = opponentAnswer;
 	}
-	public void newOpponent(){
-		opponentResponse = -1;
-		firstResponse = -1;
-	}
+	public Player createNew(){return new Tester();}
 
 }

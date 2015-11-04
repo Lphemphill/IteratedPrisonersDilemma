@@ -16,6 +16,6 @@ public class Random implements Player{
 	}
 
 	public void receiveLastResponse(int opponentAnswer) {}
-	public void newOpponent(){};
+	public Player createNew(){return new Random();}
 
 }

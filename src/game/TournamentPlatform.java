@@ -10,7 +10,6 @@ import java.util.HashMap;
 public class TournamentPlatform {
 	public static void main(String[] args){
 
-		
 		//ArrayList of players
 		ArrayList<Player> players = new ArrayList<Player>();
 		
@@ -23,7 +22,7 @@ public class TournamentPlatform {
 		players.add(new Joss());
 		players.add(new Tester());
 		//Is always silent, making it a terrible player. Feel free to add it in as it often changes results, making Betrayer do much better.
-		players.add(new Silent());
+		//players.add(new Silent());
 		
 		//HashMap for scores so players cannot change their own scores
 		HashMap<String, Integer> playerScores = new HashMap<String, Integer>();
@@ -41,8 +40,10 @@ public class TournamentPlatform {
 			 for(int j = i+1; j < players.size(); j++){
 				 Player player2 = players.get(j);
 				 for(int k = 0; k < iterations; k++) play(player1, player2, scores);
-				 player1.newOpponent();
-				 player2.newOpponent();
+				 Player newPlayer1 = player1.createNew();
+				 players.set(i, newPlayer1);
+				 Player newPlayer2 = player2.createNew();
+				 players.set(j, newPlayer2);
 			 }
 		}
 		

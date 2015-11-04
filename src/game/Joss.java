@@ -1,6 +1,6 @@
 package game;
 /**
- * Acts like a sneakier Tit for Tat. It always betrays after being betrayed, and if it's opponent is silent, 90% of the time it will also be silent
+ * Acts like a sneakier Tit for Tat. It always betrays after being betrayed, and if its opponent is silent, 90% of the time it will also be silent
  * @author Originally part of an IPD tournament, written for java by lphemphill
  * 7/31/15
  */
@@ -27,6 +27,6 @@ public class Joss implements Player{
 	public void receiveLastResponse(int opponentAnswer) {
 		opponentResponse = opponentAnswer;
 	}
-	public void newOpponent(){ opponentResponse = -1; }
+	public Player createNew(){return new Joss();}
 
 }

@@ -24,5 +24,7 @@ public class TitForTat implements Player{
 		opponentResponse = opponentAnswer;
 	}
 	public void newOpponent(){ opponentResponse = -1; }
+	
+	public Player createNew(){ return new TitForTat(); }
 
 }

@@ -17,6 +17,6 @@ public class Betrayer implements Player{
 	}
 
 	public void receiveLastResponse(int opponentAnswer) {}
-	public void newOpponent(){};
+	public Player createNew(){return new Betrayer();}
 
 }

@@ -23,8 +23,6 @@ public class Friedman implements Player{
 	public void receiveLastResponse(int opponentAnswer) {
 		if(opponentAnswer == 1) betrayed = true;
 	}
-	public void newOpponent(){
-		betrayed = false;
-	};
+	public Player createNew(){return new Friedman();}
 
 }

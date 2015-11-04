@@ -21,7 +21,7 @@ public interface Player {
 	 */
 	public void receiveLastResponse(int opponentAnswer);
 	/**
-	 * The player is simply prompted that it is playing against a new opponent, and can choose to use the info to reset the info it may have gathered
+	 * The player is about to play against a new opponent and must be reinstantiated; return a new copy of the same player
 	 */
-	public void newOpponent();
+	public Player createNew();
 }
